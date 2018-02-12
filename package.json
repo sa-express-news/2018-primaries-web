@@ -1,0 +1,33 @@
+{
+  "name": "2018-primaries-front-end",
+  "version": "1.0.0",
+  "description": "Front-end template for ExpressNews.com 2018 primaries coverage",
+  "main": "./src/scripts/index.js",
+  "scripts": {
+    "test": "webpack --config webpack.test.config.js",
+    "build": "webpack -p",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sa-express-news/2018-primaries-web.git"
+  },
+  "keywords": [
+    "texas",
+    "primaries",
+    "elections",
+    "san",
+    "antonio",
+    "express",
+    "news"
+  ],
+  "author": "Luke Whyte, Annie Millerbernd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sa-express-news/2018-primaries-web/issues"
+  },
+  "homepage": "https://github.com/sa-express-news/2018-primaries-web#readme",
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  }
+}
