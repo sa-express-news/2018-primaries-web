@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Front-end template for ExpressNews.com 2018 primaries coverage",
   "main": "./src/scripts/index.js",
+  "siteTitle": "2018 Texas Primaries",
   "scripts": {
     "test": "webpack --config webpack.test.config.js",
-    "build": "webpack -p",
-    "watch": "webpack --watch"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,24 @@
   },
   "homepage": "https://github.com/sa-express-news/2018-primaries-web#readme",
   "devDependencies": {
-    "webpack": "^3.11.0"
+    "babel-minify-webpack-plugin": "^0.3.0",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "handlebars-loader": "^1.6.0",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-loader": "^8.0.0-beta.0",
+    "handlebars": "^4.0.11"
   }
 }
