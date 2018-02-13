@@ -36,6 +36,7 @@
     "file-loader": "^1.1.6",
     "handlebars-loader": "^1.6.0",
     "html-webpack-plugin": "^2.30.1",
+    "mock-socket": "^7.1.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
