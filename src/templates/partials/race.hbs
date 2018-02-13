@@ -3,9 +3,9 @@
 
   <div id="graphic-container">
 
-    {% import "includes/executive-shares.html" as executiveShares %}
-
-    {{ executiveShares.build(MERGER_SHARE_VALUE, 605975584) }}
+    {{#each}}
+    	{{> bargraph}}
+    {{/each}}
 
   </div>
 
