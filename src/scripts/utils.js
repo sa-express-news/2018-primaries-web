@@ -18,11 +18,16 @@ export const setMax = primary => {
  * Add priority property to primaries to guide CSS classes
  */
 
-const priorityMap = {
-	1234: 'first',
-};
+const priorityRaces = [1234, 5678];
 
-const mapPrimaryPriorities = primary => priorityMap[primary.id] ? priorityMap[primary.id] : '';
+const mapPrimaryPriorities = primary => {
+	for (let i = 0; i < priorityRaces.length; i++) {
+		if (priorityRaces[i] === primary.id) {
+			return 'priority';
+		}
+	}
+	return '';
+};
 
 export const setPriority = primary => {
 	const priority = mapPrimaryPriorities(primary);

@@ -31,12 +31,21 @@ $label-width: 28%;
     height: 100%;
     padding: .5em .5em .5em 0;
     text-align: left;
-}
 
-.bar-value {
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    position: relative;
-    left: 6px;
-    text-shadow: none;
+    .bar-value {
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        position: relative;
+        left: 6px;
+        text-shadow: 0 0 .125em rgba(0, 0, 0, .4);
+    }
+
+    &.outside {
+        text-align: right;
+
+        .bar-value {
+            left: calc(100% + 10px);
+            color: black;
+        }
+    }
 }

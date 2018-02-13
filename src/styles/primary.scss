@@ -1,3 +1,23 @@
 div.primary {
-	width: 100%;
+	width: 28%;
+	display: inline-block;
+	margin: 0 1% 0;
+	vertical-align: top;
+
+	&.priority {
+		width: 100%;
+		margin: 0;
+
+		div.graphic {
+			max-width: 46%;
+		}
+	}
+
+	div.graphic {
+		max-width: 100%;
+		width: 100%;
+		margin: 0 1% 0;
+		display: inline-block;
+		vertical-align: top;
+	}
 }
