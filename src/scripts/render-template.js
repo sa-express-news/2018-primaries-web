@@ -9,5 +9,5 @@ const hydrateLP = data => landingPage(data)
 export default (el, socket) => {
 	socket.on('update', data => {
 		el.innerHTML = hydrateLP(parseData(data));
-	})
+	});
 };
