@@ -1,3 +1,17 @@
-<div>
-	{{title}}
+<div class="graphic">
+  <h1>{{ title }}</h1>
+
+  <div id="graphic-container">
+
+    {% import "includes/executive-shares.html" as executiveShares %}
+
+    {{ executiveShares.build(MERGER_SHARE_VALUE, 605975584) }}
+
+  </div>
+
+  <div class="footer">
+    <ul>
+      {% if source %}<li>Source: {% if source_url %}<a href="{{  source_url }}">{{ source }}</a>{% else %}{{ source }}{% endif %}</li>{% endif %}
+    </ul>
+  </div>
 </div>

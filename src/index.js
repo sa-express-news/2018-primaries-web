@@ -1,5 +1,3 @@
-import { SocketIO, Server } from 'mock-socket';
-
 // import js files
 import websocket 	from './scripts/websocket';
 import render		from './scripts/render-template';
@@ -8,18 +6,8 @@ import render		from './scripts/render-template';
 import './styles/main.scss';
 
 // mock server
-const mockServer = new Server('http://localhost:8080');
-const mockEvent = title => ({
-	race: [
-		{ title: 'First'},
-		{ title: 'Second'},
-		{ title: title},
-	]
-})
-mockServer.on('connection', server => {
-	mockServer.emit('update', mockEvent('Third'));
-});
-window.io = SocketIO;
+const mockServer = websocket.mockServer();
+mockServer.mockTimeout(4000);
 // end mock server
 
 const socket = websocket.init();
@@ -29,5 +17,3 @@ main.classList.add('main');
 document.body.appendChild(main);
 
 render(main, socket);
-
-setTimeout(() => mockServer.emit('update', mockEvent('Modified!')), 4000);
