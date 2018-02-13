@@ -1,1 +1,7 @@
-@import './reset.css';
+@import '~express-news-styleguide/init-base';
+@import '~express-news-styleguide/theme/graphic';
+@import './base.scss';
+@import './landing-page.scss';
+@import './primary.scss';
+@import './race.scss';
+@import './bar.scss';

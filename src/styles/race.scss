@@ -1,0 +1,25 @@
+div.graphic {
+	max-width: 46%;
+	width: 100%;
+	margin: 0 1% 0;
+	display: inline-block;
+}
+
+.bar-chart {
+	@include clearfix;
+	font-size: .75em;
+	margin: 0 0 1.666666667em; // 20px
+
+	&.republican .bar-color {
+		background-color: $rep-red;
+	}
+
+	&.democrat .bar-color {
+		background-color: $dem-blue;
+	}
+}
+
+
+.footer {
+	padding: 0 0 1em 0;
+}

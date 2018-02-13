@@ -49,7 +49,10 @@ module.exports = merge(common, {
 				query: {
                 	partialDirs: [
                     	path.join(__dirname, 'src/templates', 'partials')
-                	]
+                	],
+                	helperDirs: [
+                		path.join(__dirname, 'src/templates', 'helpers')
+                	],
 				},
 			},
 			{

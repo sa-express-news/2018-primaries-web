@@ -6,11 +6,11 @@ const path 		= require('path');
 module.exports = merge(common, {
 	output: {
 		filename: '[name].[hash].js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'tmp'),
 	},
 	devtool: 'inline-source-map',
 	devServer: {
-    	contentBase: './dist',
+    	contentBase: './tmp',
     	hot: true,
 	},
 	module: {
@@ -44,7 +44,10 @@ module.exports = merge(common, {
 				query: {
                 	partialDirs: [
                     	path.join(__dirname, 'src/templates', 'partials')
-                	]
+                	],
+                	helperDirs: [
+                		path.join(__dirname, 'src/templates', 'helpers')
+                	],
 				},
 			},
 			{

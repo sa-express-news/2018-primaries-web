@@ -1,17 +1,19 @@
-<div class="graphic {{#if isRepublican}}republican{{else}}democrat{{/if}}">
-  <h1>{{ title }}</h1>
+<div class="graphic">
+    <h1>{{ title }}</h1>
 
-  <div id="graphic-container">
+    <div id="graphic-container">
 
-    {{#each}}
-    	{{> bargraph}}
-    {{/each}}
+        <div class="bar-chart {{#if isRepublican}}republican{{else}}democrat{{/if}}">
+            {{#each candidates}}
+                {{> bar max=../max}}
+            {{/each}}
+        </div>
 
-  </div>
+    </div>
 
-  <div class="footer">
-    <ul>
-      {{#if source}}<li>Source: {{#if source_url }}<a href="{{  source_url }}">{{ source }}</a>{{else}}{{ source }}{{/if}}</li>{{/if}}
-    </ul>
-  </div>
+    <div class="footer">
+        <ul>
+            {{#if source}}<li>Source: {{#if source_url }}<a href="{{  source_url }}">{{ source }}</a>{{else}}{{ source }}{{/if}}</li>{{/if}}
+        </ul>
+    </div>
 </div>

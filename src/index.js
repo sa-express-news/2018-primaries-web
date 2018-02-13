@@ -7,7 +7,7 @@ import './styles/main.scss';
 
 // mock server
 const mockServer = websocket.mockServer();
-mockServer.mockTimeout(4000);
+//mockServer.mockTimeout(4000);
 // end mock server
 
 const socket = websocket.init();

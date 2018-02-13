@@ -1,6 +1,6 @@
 import { SocketIO, Server } from 'mock-socket';
 
-import data from 'pseudo-data';
+import data from './pseudo-data';
 
 const mockServer = () => {
 	// psuedo crap we'll replace;
@@ -10,7 +10,7 @@ const mockServer = () => {
 	const mockEvent = data => (data)
 
 	server.on('connection', server => {
-		server.emit('update', mockEvent('Third'));
+		server.emit('update', mockEvent(data));
 	});
 
 	window.io = SocketIO;

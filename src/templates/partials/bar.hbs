@@ -1,0 +1,8 @@
+<div class="chart-row">
+    <div class="row-label">{{ name }}</div>
+    <div class="row-bar{{#if @last}} last-row{{/if}}">
+        <span class="bar-color" style="width: {{set-bar-width val max}}">
+            <span class="bar-value">{{val}}%</span>
+        </span>
+    </div>
+</div>

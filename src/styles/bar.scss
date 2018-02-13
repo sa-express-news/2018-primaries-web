@@ -1,0 +1,42 @@
+$label-width: 28%;
+
+.chart-row {
+    @include clearfix;
+}
+
+.row-label {
+    float: left;
+    font-weight: 700;
+    font-size: 0.75em;
+    padding: .5em 1em .5em 0;
+    text-align: right;
+    width: $label-width;
+    @include mediaquery($default-tablet) {
+        font-size: 1em;
+    }
+}
+
+.row-bar {
+    float: left;
+    padding: 0 0 .75em;
+    width: 96% - $label-width;
+}
+
+.last-row {
+    margin: 0;
+}
+
+.bar-color {
+    display: block;
+    height: 100%;
+    padding: .5em .5em .5em 0;
+    text-align: left;
+}
+
+.bar-value {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    position: relative;
+    left: 6px;
+    text-shadow: none;
+}
