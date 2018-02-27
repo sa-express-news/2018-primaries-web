@@ -1,6 +1,18 @@
 <header></header>
 <div>
-    {{#each primaries}}
-        {{> primary}}
-    {{/each}}
+	<div class="priority-wrapper">
+    	{{#each primaries.priority}}
+        	{{> primary}}
+    	{{/each}}
+    </div>
+    <div class="secondary-wrapper">
+    	{{#each primaries.secondary}}
+        	{{> primary}}
+    	{{/each}}
+    </div>
+    <div class="tertiary-wrapper">
+    	{{#each primaries.tertiary}}
+        	{{> primary}}
+    	{{/each}}
+    </div>
 </div>
