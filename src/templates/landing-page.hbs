@@ -1,18 +1,22 @@
 <header></header>
 <div>
-	<div class="priority-wrapper">
+	<section id="priority-wrapper">
     	{{#each primaries.priority}}
         	{{> primary}}
     	{{/each}}
-    </div>
-    <div class="secondary-wrapper">
+    </section>
+    <section id="secondary-wrapper">
     	{{#each primaries.secondary}}
         	{{> primary}}
     	{{/each}}
-    </div>
-    <div class="tertiary-wrapper">
+    </section>
+    <section id="tertiary-wrapper">
     	{{#each primaries.tertiary}}
         	{{> primary}}
     	{{/each}}
-    </div>
+    </section>
+    <section id="credit">
+    	<p class="credit">Graphics by Luke Whyte, Kia Farhang and Annie Millerbernd</p>
+    	<p class="credit">Curation and research by Mike Knoop and Misty Harris</p>
+    </section>
 </div>

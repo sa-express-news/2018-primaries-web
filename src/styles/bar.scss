@@ -7,7 +7,7 @@ $label-width: 28%;
 .row-label {
     float: left;
     font-weight: 700;
-    font-size: 0.75em;
+    font-size: 0.80em;
     padding: .5em 1em .5em 0;
     text-align: right;
     width: $label-width;
@@ -34,7 +34,7 @@ $label-width: 28%;
 
     .bar-value {
         color: rgb(255, 255, 255);
-        font-weight: 600;
+        font-weight: 500;
         position: relative;
         left: 6px;
         text-shadow: 0 0 .125em rgba(0, 0, 0, .4);
