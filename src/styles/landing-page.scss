@@ -339,15 +339,13 @@
     }
 
     /*begin relevant code*/
-
+    div.primary.priority h2 {
+        margin-bottom: 15px;
+    }
     div.primary.priority {
-        display: flex;
+        margin-bottom: 15px;
+        border-bottom: solid 1px #D3D3D3
     }
-    div.graphic {
-    }
-
-
-
 
 
 
