@@ -18,6 +18,7 @@ module.exports = {
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			title: getSiteTitle(),
+			template: 'src/index.html',
 		}),
 	],
 };
