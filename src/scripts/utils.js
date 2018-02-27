@@ -15,21 +15,33 @@ export const setMax = primary => {
 };
 
 /*
- * Add priority property to primaries to guide CSS classes
+ * getPriorityKey returns a string, either 'priority', 'secondary' or 'tertiary',
+ * which maps to one of three keys in the 'primaries' object being created in 'parse-data.js'
  */
 
 const priorityRaces = [1234, 5678];
+const secondaryRaces = [4322, 3627];
 
-const mapPrimaryPriorities = primary => {
-	for (let i = 0; i < priorityRaces.length; i++) {
-		if (priorityRaces[i] === primary.id) {
+const getNumberOfIdsToCheck = () => priorityRaces.length > secondaryRaces.length ? priorityRaces.length : secondaryRaces.length;
+
+export const getPriorityKey = primary => {
+	for (let i = 0; i < getNumberOfIdsToCheck(); i++) {
+		if (priorityRaces[i] && priorityRaces[i] === primary.id) {
 			return 'priority';
+		} else if (secondaryRaces[i] && secondaryRaces[i] === primary.id) {
+			return 'secondary';
 		}
 	}
-	return '';
+	return 'tertiary';
 };
 
-export const setPriority = primary => {
-	const priority = mapPrimaryPriorities(primary);
-	return Object.assign({}, primary, { priority });
+/*
+ * setMaxAndPushToObjArray is called by data.primaries.reduce in 'parse-data.js'
+ * 'prioritiesObj' has the default value of { priority: [], secondary: [], tertiary: [] }
+ */
+
+export const mapPrimaryToPrioritiesObj = (prioritiesObj, primary) => {
+	primary = setMax(primary);
+	prioritiesObj[getPriorityKey(primary)].push(primary);
+	return prioritiesObj;
 };
