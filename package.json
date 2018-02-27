@@ -5,7 +5,6 @@
   "main": "./src/scripts/index.js",
   "siteTitle": "2018 Texas Primaries",
   "scripts": {
-    "test": "webpack --config webpack.test.config.js",
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
