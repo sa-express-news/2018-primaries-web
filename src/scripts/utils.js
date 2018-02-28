@@ -1,3 +1,5 @@
+import { priorityRaces, secondaryRaces } from './parse-data';
+
 /*
  * Calculate max width for each race's bars
  */
@@ -18,9 +20,6 @@ export const setMax = primary => {
  * getPriorityKey returns a string, either 'priority', 'secondary' or 'tertiary',
  * which maps to one of three keys in the 'primaries' object being created in 'parse-data.js'
  */
-
-const priorityRaces = [1234, 5678];
-const secondaryRaces = [4322, 3627];
 
 const getNumberOfIdsToCheck = () => priorityRaces.length > secondaryRaces.length ? priorityRaces.length : secondaryRaces.length;
 
