@@ -6,6 +6,7 @@ div.primary {
 
 	&.priority {
 		width: 100%;
+		margin: 0 auto;
 
 		div.graphic {
 			max-width: 46%;
@@ -20,3 +21,29 @@ div.primary {
 		vertical-align: top;
 	}
 }
+#secondary-wrapper, #tertiary-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+#secondary-wrapper .primary, #tertiary-wrapper .primary {
+    flex-basis: 30%
+}
+    div.primary h2 {
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+    div.primary {
+        margin-bottom: 25px;
+        border-bottom: solid 1px #9C9B91;
+        padding-top: 15px;
+    }
+    #tertiary-wrapper .primary:last-of-type {
+        border-bottom: none;
+    }
+    div.graphic {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    div.graphic h1 {
+        padding-bottom: 15px;
+    }

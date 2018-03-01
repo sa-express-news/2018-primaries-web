@@ -327,19 +327,23 @@
     .clearfix {
         zoom: 1;
     }
+    body {
+        margin: 0;
+    }
 
     /*now we're cutting WCM styles*/
 
-    body #home {
-        margin: 0;
-    }
 
     div.pagecontent.faux-21 {
         margin: 0;
     }
 
     /*begin relevant code*/
-    
+    body {
+        margin: 0 auto;
+        width: 95%;
+        max-width: 1200px;
+    }
     div.primary h2 {
         margin-bottom: 25px;
         font-size: 20px;
@@ -351,6 +355,10 @@
     }
     #tertiary-wrapper .primary:last-of-type {
         border-bottom: none;
+    }
+    #priority-wrapper #secondary-wrapper #tertiary-wrapper {
+        display:flex;
+        justify-content: space-between;
     }
     div.graphic {
         margin-bottom: 15px;
@@ -369,9 +377,9 @@
         text-decoration: underline;
     }
     div.mobileNav {
-        text-align: center;
         font-size: 15px;
         margin-bottom: 5px;
+        margin-left: 15px;
     }
     div.mobileNav p.mobileOtherRaces {
         margin-bottom: 10px;
@@ -387,7 +395,7 @@
     div.pageHeader h1.pageTitle {
         margin-bottom: 10px;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 25px;
     }
     div.pageHeader p.byline {
         font-size: 12px;
@@ -404,9 +412,8 @@
         overflow:hidden;
     }
     #menuNav a {
-        display: block;
-        text-align: center;
-        float: left;
+        display: inline-block;
+        justify-content: space-between;
     }
     .snap {
         position: fixed;
@@ -416,18 +423,20 @@
     .otherRaces a {
         padding: 10px 15px;
         background-color: white;
-        text-align: center;
     }
     .otherRaces.snap {
         background-color: white;
         z-index: 10;
-        display: flex;
-        flex-flow: row nowrap;
-        width: 100%
+        margin: 0 auto;
+        display: inline-block;
+        width: 95%;
+        border-bottom: 1px solid #000;
     }
 
+/*Media queries*/ 
+
 @media (max-width: 499px) {
-    nav.otherRaces.snap {
+    nav#menuNav.otherRaces {
         display: none;
     }
 }
@@ -438,23 +447,20 @@
 .pageHeader .pageTitle {
     font-size: 25px;
 }
-
-#secondary-wrapper, #tertiary-wrapper {
-    display: flex;
-}
-.primary {
-    flex-basis: 30%
-}
 div.mobileNav {
     display: none;
 }
 .otherRaces a {
     font-size: 12px;
+    padding: 5px;
 }
 }
 @media (min-width: 600px) {
     .otherRaces a {
-        font-size: 15px;
+        font-size: 12px;
+    }
+    div.pageHeader div.pageTitle {
+        font-size: 25px;
     }
 }
 @media (min-width: 740px) {
@@ -462,11 +468,7 @@ div.mobileNav {
         font-size: 18px;
     }
 }
-@media (min-width: 769px) {
-    body {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
+@media (min-width: 767px) {
     div.pageHeader {
         padding-bottom: 20px;
         text-align: center;
@@ -478,7 +480,6 @@ div.mobileNav {
         padding-top: 20px;
     }
     div.pageHeader p.byline {
-        padding-left: 10px;
         font-size: 15px;
         padding-bottom: 2px;
     }
