@@ -21,12 +21,14 @@ div.primary {
 		vertical-align: top;
 	}
 }
+@media(min-width: 499px){
 #secondary-wrapper, #tertiary-wrapper {
     display: flex;
     flex-flow: row wrap;
 }
 #secondary-wrapper .primary, #tertiary-wrapper .primary {
     flex-basis: 30%
+}
 }
     div.primary h2 {
         margin-bottom: 25px;
