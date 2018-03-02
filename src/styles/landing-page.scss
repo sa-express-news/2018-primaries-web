@@ -344,6 +344,11 @@
         width: 95%;
         max-width: 1200px;
     }
+    h1.sectionTitle {
+        font-size: 25px;
+        font-weight: bold;
+        margin: 15px 5px;
+    }
     div.primary h2 {
         margin-bottom: 25px;
         font-size: 20px;
@@ -353,10 +358,10 @@
         border-bottom: solid 1px #9C9B91;
         padding-top: 15px;
     }
-    #tertiary-wrapper .primary:last-of-type {
+    .county-wrapper .primary:last-of-type {
         border-bottom: none;
     }
-    #priority-wrapper #secondary-wrapper #tertiary-wrapper {
+    #priority-wrapper .large-wrapper .county-wrapper {
         display:flex;
         justify-content: space-between;
     }
@@ -430,7 +435,6 @@
         margin: 0 auto;
         display: inline-block;
         width: 95%;
-        border-bottom: 1px solid #000;
     }
 
 /*Media queries*/ 

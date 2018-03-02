@@ -22,12 +22,12 @@ div.primary {
 	}
 }
 @media(min-width: 499px){
-#secondary-wrapper, #tertiary-wrapper {
+.large-wrapper, .county-wrapper {
     display: flex;
     flex-flow: row wrap;
 }
-#secondary-wrapper .primary, #tertiary-wrapper .primary {
-    flex-basis: 30%
+.large-wrapper .primary, .county-wrapper .primary {
+    flex-basis: 27%
 }
 }
     div.primary h2 {
@@ -39,7 +39,7 @@ div.primary {
         border-bottom: solid 1px #9C9B91;
         padding-top: 15px;
     }
-    #tertiary-wrapper .primary:last-of-type {
+    #county-wrapper .primary:last-of-type {
         border-bottom: none;
     }
     div.graphic {
