@@ -7,11 +7,20 @@ import './styles/main.scss';
 
 const main = document.createElement('div');
 main.classList.add('main');
-document.body.appendChild(main);
 
 const socket = io("http://localhost:8787", {
 	path: "/2018-primary-elections"
 });
+
+// If we're in the WCM, we want to append the content to the '.subsection_wrap' div
+
+const subsection = document.querySelector('div.subsection_wrap');
+
+if(subsection){
+	subsection.appendChild(main);
+}else{
+	document.body.appendChild(main);
+}
 
 render(main, socket);
 
