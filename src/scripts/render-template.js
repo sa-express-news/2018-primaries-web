@@ -5,7 +5,7 @@ import parseData from './parse-data';
 import landingPage from '../templates/landing-page.hbs';
 
 export default (el, socket) => {
-	socket.on('update', data => {
-		el.innerHTML = landingPage(parseData(data));
+	socket.on('data', data => {
+		el.innerHTML = landingPage(parseData(JSON.parse(data)));
 	});
 };
