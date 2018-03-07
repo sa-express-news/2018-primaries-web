@@ -21,6 +21,13 @@ const socket = io("https://expressnewsdata.com", {
 	path: "/elections/2018-primary-elections"
 });
 
+const fixShareLinks = () => {
+	const twitterButton = document.querySelector("a.twitter-share-button");
+	twitterButton.href = "https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.expressnews.com%2F2018-primary-results%2F&text=Track%20Texas%20primaries%20with%20the%20@ExpressNews";
+	const facebookButton = document.querySelector("a.facebook-share-button");
+	facebookButton.href = "https://www.facebook.com/sharer/sharer.php?u=https://www.expressnews.com/2018-primary-results/";
+}
+
 render(main, socket);
 
 window.onscroll = function () { follow() };
@@ -33,3 +40,5 @@ function follow() {
 		menuNav.classList.remove("snap");
 	}
 }
+
+fixShareLinks();
