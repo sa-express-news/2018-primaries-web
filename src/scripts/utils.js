@@ -8,10 +8,15 @@ const calculateMax = race => race.candidates.reduce((sum, hash) => {
 	return hash.votes > sum ? hash.votes : sum;
 }, 0);
 
-export const setMax = primary => {
+const calculateTotal = race => race.candidates.reduce((sum, hash) => {
+	return sum + hash.votes;
+}, 0); 
+
+export const setMaxAndTotal = primary => {
 	const races = primary.races.map(race => {
 		const max = calculateMax(race);
-		return Object.assign({}, race, { max });
+		const total = calculateTotal(race);
+		return Object.assign({}, race, { max, total });
 	});
 	return Object.assign({}, primary, { races });
 };
@@ -40,7 +45,7 @@ export const getPriorityKey = primary => {
  */
 
 export const mapPrimaryToPrioritiesObj = (prioritiesObj, primary) => {
-	primary = setMax(primary);
+	primary = setMaxAndTotal(primary);
 	prioritiesObj[getPriorityKey(primary)].push(primary);
 	return prioritiesObj;
 };

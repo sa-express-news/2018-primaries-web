@@ -1,1 +1,1 @@
-module.exports = (votes, max) => votes ? `${Math.round((+votes / max) * 100, 2)}` : '0'; 
+module.exports = (votes, total) => votes ? `${Math.round((+votes / total) * 100, 2)}` : '0'; 

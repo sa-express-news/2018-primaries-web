@@ -5,7 +5,7 @@
 
         <div class="bar-chart {{#if isRepublican}}republican{{else}}democrat{{/if}}">
             {{#each candidates}}
-                {{> bar max=../max}}
+                {{> bar max=../max total=../total}}
             {{/each}}
         </div>
 
