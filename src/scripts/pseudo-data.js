@@ -7,6 +7,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -31,6 +32,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -61,6 +63,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -81,6 +84,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -139,6 +143,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -163,6 +168,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -193,6 +199,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -213,6 +220,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -271,6 +279,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -291,6 +300,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -349,6 +359,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -373,6 +384,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -403,6 +415,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -423,6 +436,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -481,6 +495,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -505,6 +520,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -535,6 +551,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -555,6 +572,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -613,6 +631,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -637,6 +656,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -667,6 +687,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -687,6 +708,7 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
@@ -745,6 +767,7 @@ export default {
 				{
 					isRepublican: true,
 					title: 'A Republican Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A republican',
@@ -769,9 +792,13 @@ export default {
 				{
 					isRepublican: false,
 					title: 'A Democratic Primary',
+					percentPrecinctsReporting: 40,
 					candidates: [
 						{
 							name: 'A democrat',
+							incumbent: true,
+						    winner: true,
+						    runoff: false,
 							val: 55,
 						},
 						{
@@ -823,6 +850,9 @@ export default {
 						{
 							name: 'A democrat',
 							val: 50,
+							incumbent: false,
+						    winner: false,
+						    runoff: false,
 						},
 						{
 							name: 'Another democrat',
@@ -831,6 +861,9 @@ export default {
 						{
 							name: 'A third democrat',
 							val: 10,
+							incumbent: false,
+						    winner: true,
+						    runoff: false,
 						},
 						{
 							name: 'A fourth democrat',

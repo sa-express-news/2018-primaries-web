@@ -1,1 +1,1 @@
-module.exports = (val, max) => ((val / max) * 100) < 5 ? 'outside' : '';
+module.exports = (val, max) => ((val / max) * 100) < 15 ? 'outside' : '';
