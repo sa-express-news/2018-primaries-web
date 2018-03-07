@@ -416,6 +416,9 @@
         margin: 10px 10px;
         font-style: italic;
     }
+    p.webIncumbent {
+        display: none;
+    }
 
 /* Stick nav*/
     #menuNav {
@@ -462,6 +465,9 @@ div.mobileNav {
 .otherRaces a {
     font-size: 12px;
     padding: 5px;
+}
+p.webIncumbent {
+    display: inline;
 }
 }
 @media (min-width: 600px) {
