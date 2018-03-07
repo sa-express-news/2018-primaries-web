@@ -342,8 +342,12 @@
     body {
         margin: 0 auto;
         width: 95%;
+    }
+    div.pageWrapper {
+        margin: 0 auto;
         max-width: 1200px;
     }
+
     h1.sectionTitle {
         font-size: 25px;
         font-weight: bold;
@@ -404,6 +408,7 @@
     }
     div.pageHeader p.byline {
         font-size: 12px;
+        font-family: helvetica;
         font-weight: 700;
     }
     p.credit {
@@ -460,7 +465,7 @@ div.mobileNav {
 }
 }
 @media (min-width: 600px) {
-    .otherRaces a {
+    .otherRaces#menuNav.otherRaces {
         font-size: 12px;
     }
     div.pageHeader div.pageTitle {
@@ -468,7 +473,7 @@ div.mobileNav {
     }
 }
 @media (min-width: 740px) {
-    .otherRaces a {
+    .otherRaces#menuNav.otherRaces {
         font-size: 18px;
     }
 }
@@ -491,6 +496,11 @@ div.mobileNav {
         font-size: 20px;
         margin: 0 95px;
         padding-bottom: 20px;
+    }
+}
+@media (min-width: 825px) {
+    .otherRaces#menuNav.otherRaces a {
+        font-size: 20px;
     }
 }
 
