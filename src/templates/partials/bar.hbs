@@ -1,8 +1,8 @@
 <div class="chart-row{{#if runoff}} runoff{{/if}}{{#if winner}} winner{{/if}}">
-    <div class="row-label">{{ name }}{{#if incumbent}} *{{/if}}</div>
+    <div class="row-label">{{ name }}{{#if incumbent}}*{{/if}}</div>
     <div class="row-bar{{#if @last}} last-row{{/if}}">
-        <span class="bar-color {{is-outside val max}}" style="width: {{set-bar-width val max}}">
-            <span class="bar-value">{{val}}%</span>
+        <span class="bar-color {{is-outside votes max}}" style="width: {{set-bar-width votes max}}">
+            <span class="bar-value">{{votes}}%</span>
         </span>
     </div>
 </div>
