@@ -11,16 +11,38 @@ div.graphic {
 	font-size: .75em;
 	margin: 0 0 1.666666667em; // 20px
 
-	&.republican .bar-color {
-		background-color: $rep-red;
+	&.republican {
+		.chart-row {
+			&.winner, &.runoff {
+        		.row-label {
+		            color: $rep-red;
+		        }
+		    }
+		}
+		.bar-color {
+			background-color: $rep-red;
+		}
 	}
 
-	&.democrat .bar-color {
-		background-color: $dem-blue;
+	&.democrat {
+		.chart-row {
+			&.winner, &.runoff {
+        		.row-label {
+		            color: $dem-blue;
+		        }
+		    }
+		}
+		.bar-color {
+			background-color: $dem-blue;
+		}
 	}
 }
 
 
 .footer {
 	padding: 0 0 1em 0;
+
+	.reporting {
+		color: #282828;
+	}
 }

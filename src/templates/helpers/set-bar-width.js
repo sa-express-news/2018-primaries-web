@@ -1,1 +1,1 @@
-module.exports = (val, max) => `${(+val / max) * 100}%`; 
+module.exports = (val, max) => val ? `${(+val / max) * 100}%` : '0'; 

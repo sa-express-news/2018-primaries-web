@@ -13,6 +13,7 @@
 
     <div class="footer">
         <ul>
+            {{#if percentPrecinctsReporting}}<li class="reporting">Precincts reporting: {{percentPrecinctsReporting}}%</li>{{/if}}
             {{#if source}}<li>Source: {{#if source_url }}<a href="{{  source_url }}">{{ source }}</a>{{else}}{{ source }}{{/if}}</li>{{/if}}
         </ul>
     </div>
