@@ -1,0 +1,1 @@
+module.exports = (votes, max) => votes ? `${Math.round((+votes / max) * 100, 2)}` : '0'; 

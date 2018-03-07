@@ -5,7 +5,7 @@ import { priorityRaces, secondaryRaces } from './parse-data';
  */
 
 const calculateMax = race => race.candidates.reduce((sum, hash) => {
-	return hash.val > sum ? hash.val : sum;
+	return hash.votes > sum ? hash.votes : sum;
 }, 0);
 
 export const setMax = primary => {
