@@ -1,7 +1,7 @@
 import { mapPrimaryToPrioritiesObj } from './utils';
 
-export const priorityRaces = [1234, 5678];
-export const secondaryRaces = [4322, 3627, 9876];
+export const priorityRaces = [0, 1, 2, 3, 4, 9, 15, 16];
+export const secondaryRaces = [5, 6, 7, 8, 17, 18, 19, 20];
 
 export default data => {
 	if (data.primaries) {
