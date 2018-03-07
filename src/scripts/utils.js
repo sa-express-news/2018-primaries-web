@@ -30,7 +30,7 @@ const getNumberOfIdsToCheck = () => priorityRaces.length > secondaryRaces.length
 
 export const getPriorityKey = primary => {
 	for (let i = 0; i < getNumberOfIdsToCheck(); i++) {
-		if (priorityRaces[i] && priorityRaces[i] === primary.id) {
+		if (typeof priorityRaces[i] === 'number' && priorityRaces[i] === primary.id) {
 			return 'priority';
 		} else if (secondaryRaces[i] && secondaryRaces[i] === primary.id) {
 			return 'secondary';
