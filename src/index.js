@@ -1,6 +1,6 @@
 // import js files
 import render from './scripts/render-template';
-import io from './scripts/websocket';
+import websocket from './scripts/websocket';
 
 // import stylesheets files
 import './styles/main.scss';
@@ -17,9 +17,17 @@ if (subsection) {
 } else {
 	document.body.appendChild(main);
 }
-const socket = io("https://expressnewsdata.com", {
-	path: "/elections/2018-primary-elections"
-});
+// const socket = io("https://expressnewsdata.com", {
+// 	path: "/elections/2018-primary-elections"
+// });
+
+// mock server
+const mockServer = websocket.mockServer();
+mockServer.mockTimeout(4000);
+// end mock server
+
+const socket = websocket.init();
+
 
 const fixShareLinks = () => {
 	const twitterButton = document.querySelector("a.twitter-share-button");
